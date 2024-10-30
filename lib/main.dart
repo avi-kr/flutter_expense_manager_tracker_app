@@ -1,6 +1,7 @@
 import 'package:expense_manager/components/TransactionView.dart';
 import 'package:expense_manager/model/Cardmodel.dart';
 import 'package:expense_manager/model/TransactionModel.dart';
+import 'package:expense_manager/pages/AddCardPage.dart';
 import 'package:flutter/material.dart';
 
 import 'components/CardView.dart';
@@ -49,7 +50,10 @@ class _HomePageState extends State<HomePage> {
         leading: null,
         actions: <Widget>[
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => AddCardPage()));
+            },
             icon: Icon(
               Icons.add,
               color: Colors.black45,
